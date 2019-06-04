@@ -40,6 +40,50 @@ namespace Repositório
             }
             conexao.Close();
             return produtosHigienicos;
+        }
+
+        public ProdutoHigienico ObterPeloId(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "SELECT * FROM produtos_higienicos WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Load(comando.ExecuteReader());
+            conexao.Close();
+            if (dataTable.Rows.Count == 1)
+            {
+                DataRow linha = dataTable.Rows[0];
+                ProdutoHigienico produtoHigienico = new ProdutoHigienico();
+                produtoHigienico.Id = Convert.ToInt32(linha["id"]);
+                produtoHigienico.Nome = linha["nome"].ToString();
+                produtoHigienico.Preco = Convert.ToDecimal(linha["preco"]);
+                produtoHigienico.Categoria = linha["categoria"].ToString();
+                return produtoHigienico;
+            }
+            return null;
+        }
+
+        public void Inserir (ProdutoHigienico produtoHigienico)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"INSERT INTO produtos_higienicos (nome, preco, categoria) VALUES (@NOME, @PRECO, @CATEGORIA)";
+            comando.Parameters.AddWithValue("@NOME", produtoHigienico.Nome);
+            comando.Parameters.AddWithValue("@PRECO", produtoHigienico.Preco);
+            comando.Parameters.AddWithValue("@CATEGORIA", produtoHigienico.Categoria);
+
+            comando.ExecuteNonQuery();
+            conexao.Close();
 
         }
     }
