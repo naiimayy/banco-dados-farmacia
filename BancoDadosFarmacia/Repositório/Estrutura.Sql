@@ -7,3 +7,5 @@
 
 	SELECT id, nome, preco, categoria FROM produtos_higienicos;
 	
+	CREATE TABLE produtos_comestiveis(
+		id INT  PRIMARY KEY IDENTITY (1,1),

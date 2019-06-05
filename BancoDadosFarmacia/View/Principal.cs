@@ -19,7 +19,7 @@ namespace View
 
         private void btnCadastroProdutoHigienico_Click(object sender, EventArgs e)
         {
-            FormCadastroProdutoHigienico form = new FormCadastroProdutoHigienico();
+            FormListaProdutoHigienico form = new FormListaProdutoHigienico();
             form.Visible = true;
         }
     }

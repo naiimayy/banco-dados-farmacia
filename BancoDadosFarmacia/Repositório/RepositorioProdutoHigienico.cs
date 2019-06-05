@@ -113,7 +113,7 @@ namespace Repositório
                                    preco = @PRECO,
                                    categoria = @CATEGORIA
                                    WHERE id = @ID";
-
+            comando.Parameters.AddWithValue("@ID", produtoHigienico.Id);
             comando.Parameters.AddWithValue("@NOME", produtoHigienico.Nome);
             comando.Parameters.AddWithValue("@PRECO", produtoHigienico.Preco);
             comando.Parameters.AddWithValue("@CATEGORIA", produtoHigienico.Categoria);
