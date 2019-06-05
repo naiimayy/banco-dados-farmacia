@@ -84,7 +84,41 @@ namespace Repositório
 
             comando.ExecuteNonQuery();
             conexao.Close();
+        }
 
+        public void Apagar(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "DELETE FROM produtos_higienicos WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
+        public void Atualizar(ProdutoHigienico produtoHigienico)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"UPDATE  produtos_higienicos SET
+                                   nome = @NOME,
+                                   preco = @PRECO,
+                                   categoria = @CATEGORIA
+                                   WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@NOME", produtoHigienico.Nome);
+            comando.Parameters.AddWithValue("@PRECO", produtoHigienico.Preco);
+            comando.Parameters.AddWithValue("@CATEGORIA", produtoHigienico.Categoria);
+            comando.ExecuteNonQuery();
+            conexao.Close();
         }
     }
 }

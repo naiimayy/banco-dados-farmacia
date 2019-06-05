@@ -46,14 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormCadastroProdutoHigienico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCadastroProdutoHigienico.Designer.cs">
+      <DependentUpon>FormCadastroProdutoHigienico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarCadastroProdutoHigienico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCadastroProdutoHigienico.Designer.cs">
+      <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaProdutoHigienico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaProdutoHigienico.Designer.cs">
+      <DependentUpon>FormListaProdutoHigienico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCadastroProdutoHigienico.resx">
+      <DependentUpon>FormCadastroProdutoHigienico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCadastroProdutoHigienico.resx">
+      <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaProdutoHigienico.resx">
+      <DependentUpon>FormListaProdutoHigienico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{eaee1cb8-434d-40d1-8ebf-7fc0c32fa32f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositório\Repositorio.csproj">
+      <Project>{ad89b705-7e8e-4541-82b7-36fc12f5895c}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
