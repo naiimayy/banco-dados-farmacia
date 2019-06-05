@@ -9,3 +9,11 @@
 	
 	CREATE TABLE produtos_comestiveis(
 		id INT  PRIMARY KEY IDENTITY (1,1),
+		nome VARCHAR (100) NOT NULL,
+		preco DECIMAL (8,2),
+		data_vencimento VARCHAR (8),
+		quantidade INT,
+		marca VARCHAR (30),
+	);
+
+	SELECT id, nome, preco, data_vencimento, quantidade, marca FROM produtos_comestiveis;
