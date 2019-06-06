@@ -22,10 +22,44 @@ namespace View
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Comestivel comestivel = new Comestivel();
+            if (txtNome.Text.Length < 1)
+            {
+                MessageBox.Show("Registre o nome corretamente");
+                txtNome.Focus();
+                return;
+            }
             comestivel.Nome = txtNome.Text;
-            comestivel.Preco = Convert.ToDecimal(txtPreco.Text);
+
+            try
+            {
+               comestivel.Preco = Convert.ToDecimal(txtPreco.Text);
+                if (comestivel.Preco < 0)
+                {
+                    MessageBox.Show("Números devem ser maior do que zero");
+                }
+            }
+            catch
+            { 
+                MessageBox.Show("Campo deve conter apenas números");
+                txtPreco.Focus();
+                return;
+            }
             comestivel.DataVencimento = Convert.ToDateTime(dtpDataVencimento.Text);
-            comestivel.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+            try
+            {
+                comestivel.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+                if (comestivel.Quantidade < 0)
+                {
+                    MessageBox.Show("Test");
+                    return;
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Campo deve conter apenas números");
+                txtQuantidade.Focus();
+                return;
+            }
             comestivel.Marca = txtMarca.Text;
 
             ComestivelRepositorio repositorio = new ComestivelRepositorio();

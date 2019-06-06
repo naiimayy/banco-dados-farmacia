@@ -82,7 +82,7 @@ namespace Repositório
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "SELECT INTO produtos_comestiveis (nome, preco, data_vencimento, quantidade, marca) VALUES (@NOME, @PRECO, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
+            comando.CommandText = "INSERT INTO produtos_comestiveis (nome, preco, data_vencimento, quantidade, marca) VALUES (@NOME, @PRECO, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
             comando.Parameters.AddWithValue("@NOME", comestivel.Nome);
             comando.Parameters.AddWithValue("@PRECO", comestivel.Preco);
             comando.Parameters.AddWithValue("@DATA_VENCIMENTO", comestivel.DataVencimento);

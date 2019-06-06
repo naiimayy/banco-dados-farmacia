@@ -102,6 +102,9 @@
     <EmbeddedResource Include="FormEditarCadastroProdutoHigienico.resx">
       <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListaComestivel.resx">
+      <DependentUpon>FormListaComestivel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListaProdutoHigienico.resx">
       <DependentUpon>FormListaProdutoHigienico.cs</DependentUpon>
     </EmbeddedResource>

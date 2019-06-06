@@ -114,7 +114,7 @@
             // 
             this.dtpDataVencimento.Location = new System.Drawing.Point(12, 192);
             this.dtpDataVencimento.Name = "dtpDataVencimento";
-            this.dtpDataVencimento.Size = new System.Drawing.Size(200, 20);
+            this.dtpDataVencimento.Size = new System.Drawing.Size(234, 20);
             this.dtpDataVencimento.TabIndex = 20;
             // 
             // lblDataVencimento
