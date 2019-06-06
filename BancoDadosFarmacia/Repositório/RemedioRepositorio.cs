@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositório
 {
-    class RemedioRepositorio
+    public class RemedioRepositorio
     {
     }
 }
