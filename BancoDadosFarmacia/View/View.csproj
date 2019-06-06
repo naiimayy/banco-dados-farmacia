@@ -58,6 +58,12 @@
     <Compile Include="FormCadastroProdutoHigienico.Designer.cs">
       <DependentUpon>FormCadastroProdutoHigienico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroRemedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroRemedio.Designer.cs">
+      <DependentUpon>FormCadastroRemedio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarCadastroComestivel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="FormEditarCadastroProdutoHigienico.Designer.cs">
       <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarCadastroRemedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCadastroRemedio.Designer.cs">
+      <DependentUpon>FormEditarCadastroRemedio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListaComestivel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="FormListaProdutoHigienico.Designer.cs">
       <DependentUpon>FormListaProdutoHigienico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaRemedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaRemedio.Designer.cs">
+      <DependentUpon>FormListaRemedio.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
