@@ -92,5 +92,38 @@ namespace Repositório
             comando.ExecuteNonQuery();
             conexao.Close();
         }
+
+        public void Apagar (int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "DELETE FROM produtos_comestiveis WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
+        public void Atualizar (Comestivel comestivel)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "UPDATE produtos_comestiveis SET nome = @NOME, preco = @PRECO, data_vencimento = @DATA_VENCIMENTO, quantidade = @QUANTIDADE, marca = @MARCA WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", comestivel.Id);
+            comando.Parameters.AddWithValue("@NOME", comestivel.Nome);
+            comando.Parameters.AddWithValue("@PRECO", comestivel.Preco);
+            comando.Parameters.AddWithValue("@DATA_VENCIMENTO", comestivel.DataVencimento);
+            comando.Parameters.AddWithValue("@QUANTIDADE", comestivel.Quantidade);
+            comando.Parameters.AddWithValue("@MARCA", comestivel.Marca);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
     }
 }
