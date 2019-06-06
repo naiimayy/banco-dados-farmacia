@@ -21,7 +21,7 @@ namespace View
 
         private void AtualizarTabela()
         {
-            RepositorioProdutoHigienico repositorio = new RepositorioProdutoHigienico();
+            ProdutoHigienicoRepositorio repositorio = new ProdutoHigienicoRepositorio();
             List<ProdutoHigienico> produtosHigienicos = repositorio.ObterTodos();
             dataGridView1.Rows.Clear();
             for (int i = 0; i < produtosHigienicos.Count; i++)
@@ -35,7 +35,7 @@ namespace View
         {
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
-            RepositorioProdutoHigienico repositorio = new RepositorioProdutoHigienico();
+            ProdutoHigienicoRepositorio repositorio = new ProdutoHigienicoRepositorio();
             repositorio.Apagar(id);
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);
 
@@ -56,7 +56,7 @@ namespace View
         {
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
-            RepositorioProdutoHigienico repositorio = new RepositorioProdutoHigienico();
+            ProdutoHigienicoRepositorio repositorio = new ProdutoHigienicoRepositorio();
             ProdutoHigienico produtoHigienico = repositorio.ObterPeloId(id);
 
             FormEditarCadastroProdutoHigienico formEditarCadastroProdutoHigienico = new FormEditarCadastroProdutoHigienico(produtoHigienico);

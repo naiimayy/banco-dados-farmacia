@@ -35,7 +35,7 @@ namespace View
             produtoHigienico.Categoria = cmbCategoria.SelectedIndex.ToString();
             produtoHigienico.Preco = Convert.ToDecimal(txtPreco.Text);
 
-            RepositorioProdutoHigienico repositorio = new RepositorioProdutoHigienico();
+            ProdutoHigienicoRepositorio repositorio = new ProdutoHigienicoRepositorio();
             repositorio.Atualizar(produtoHigienico);
 
             MessageBox.Show("Editado com sucesso");

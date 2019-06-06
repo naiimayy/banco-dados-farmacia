@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCadastroComestivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroComestivel.Designer.cs">
+      <DependentUpon>FormCadastroComestivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroProdutoHigienico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCadastroProdutoHigienico.Designer.cs">
       <DependentUpon>FormCadastroProdutoHigienico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarCadastroComestivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCadastroComestivel.Designer.cs">
+      <DependentUpon>FormEditarCadastroComestivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarCadastroProdutoHigienico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEditarCadastroProdutoHigienico.Designer.cs">
       <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaComestivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaComestivel.Designer.cs">
+      <DependentUpon>FormListaComestivel.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaProdutoHigienico.cs">
       <SubType>Form</SubType>

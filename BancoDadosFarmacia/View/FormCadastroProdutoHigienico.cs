@@ -36,7 +36,7 @@ namespace View
                 return;
             }
 
-            RepositorioProdutoHigienico repositorio = new RepositorioProdutoHigienico();
+            ProdutoHigienicoRepositorio repositorio = new ProdutoHigienicoRepositorio();
             repositorio.Inserir(produtoHigienico);
             MessageBox.Show("Seu produto foi salvo com sucesso");
             Close();

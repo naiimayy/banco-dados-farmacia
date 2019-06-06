@@ -22,5 +22,11 @@ namespace View
             FormListaProdutoHigienico form = new FormListaProdutoHigienico();
             form.Visible = true;
         }
+
+        private void btnCadastroComestivel_Click(object sender, EventArgs e)
+        {
+            FormListaComestivel form = new FormListaComestivel();
+            form.Visible = true;
+        }
     }
 }

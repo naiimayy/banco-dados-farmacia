@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repositório
 {
-    public class RepositorioProdutoHigienico
+    public class ProdutoHigienicoRepositorio
     {
         string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\65979\Documents\ExercicioFarmacia.mdf;Integrated Security=True;Connect Timeout=30";
 

@@ -42,6 +42,7 @@
             this.btnCadastroComestivel.TabIndex = 0;
             this.btnCadastroComestivel.Text = "Cadastro de Comestíveis ";
             this.btnCadastroComestivel.UseVisualStyleBackColor = true;
+            this.btnCadastroComestivel.Click += new System.EventHandler(this.btnCadastroComestivel_Click);
             // 
             // btnCadastroRemedio
             // 
