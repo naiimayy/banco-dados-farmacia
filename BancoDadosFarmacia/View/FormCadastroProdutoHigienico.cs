@@ -41,5 +41,10 @@ namespace View
             MessageBox.Show("Seu produto foi salvo com sucesso");
             Close();
         }
+
+        private void FormCadastroProdutoHigienico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

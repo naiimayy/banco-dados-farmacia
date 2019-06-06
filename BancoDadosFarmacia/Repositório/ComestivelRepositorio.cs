@@ -29,7 +29,7 @@ namespace Repositório
 
             List<Comestivel> comestiveis = new List<Comestivel>();
 
-            for (int i = 0, i < tabela.Rows.Count; i++)
+            for (int i = 0; i < tabela.Rows.Count; i++)
             {
                 DataRow linha = tabela.Rows[i];
                 Comestivel comestivel = new Comestivel();

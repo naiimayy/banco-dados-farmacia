@@ -135,6 +135,7 @@
             this.Controls.Add(this.lblId);
             this.Name = "FormCadastroProdutoHigienico";
             this.Text = "FormCadastroProdutoHigienico";
+            this.Load += new System.EventHandler(this.FormCadastroProdutoHigienico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

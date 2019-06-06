@@ -90,8 +90,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCadastroComestivel.resx">
+      <DependentUpon>FormCadastroComestivel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroProdutoHigienico.resx">
       <DependentUpon>FormCadastroProdutoHigienico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCadastroComestivel.resx">
+      <DependentUpon>FormEditarCadastroComestivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarCadastroProdutoHigienico.resx">
       <DependentUpon>FormEditarCadastroProdutoHigienico.cs</DependentUpon>
