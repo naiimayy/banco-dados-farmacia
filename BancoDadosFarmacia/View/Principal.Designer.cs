@@ -53,6 +53,7 @@
             this.btnCadastroRemedio.TabIndex = 1;
             this.btnCadastroRemedio.Text = "Cadastro de Remedios";
             this.btnCadastroRemedio.UseVisualStyleBackColor = true;
+            this.btnCadastroRemedio.Click += new System.EventHandler(this.btnCadastroRemedio_Click);
             // 
             // btnCadastroProdutoHigienico
             // 

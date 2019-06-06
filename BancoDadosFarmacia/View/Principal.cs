@@ -28,5 +28,11 @@ namespace View
             FormListaComestivel form = new FormListaComestivel();
             form.Visible = true;
         }
+
+        private void btnCadastroRemedio_Click(object sender, EventArgs e)
+        {
+            FormListaRemedio form = new FormListaRemedio();
+            form.Visible = true;
+        }
     }
 }
