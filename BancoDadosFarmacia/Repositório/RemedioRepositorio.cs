@@ -45,4 +45,24 @@ namespace Repositório
         conexao.Close();
         return remedios;
     }
+
+    public Remedio ObterPeloId (int id)
+    {
+        SqlConnection conexao = new SqlConnection();
+        conexao.ConnectionString = CadeiaConexao;
+        conexao.Open();
+
+        SqlCommand comando = new SqlCommand();
+        comando.Connection = conexao;
+        comando.CommandText = "SELECT * FROM remedios WHERE id = @ID";
+
+        DataTable tabela = new DataTable();
+        tabela.Load(comando.ExecuteReader());
+        conexao.Close();
+        if (dataTable.Rows.Count == 1)
+        {
+
+        }
+        return null;
+    }
 }
