@@ -33,13 +33,16 @@ namespace Repositório
             DataRow linha = tabela.Rows[i];
             Remedio remedio = new Remedio();
             remedio.Id = Convert.ToInt32(linha["id"]);
-            remedio.Generico = ;
+            remedio.Generico = Convert.ToBoolean(linha["generico"]);
             remedio.Nome = linha["nome"].ToString();
             remedio.Categoria = linha["categoria"].ToString();
-            remedio.Solido = ;
+            remedio.Solido = Convert.ToBoolean(linha["solido"]);
             remedio.Bula = linha["bula"].ToString();
             remedio.Faixa = linha["faixa"].ToString();
-            remedio.Receita = ;
+            remedio.Receita = Convert.ToBoolean(linha["receita"]);
+            remedios.Add(remedio);
         }
+        conexao.Close();
+        return remedios;
     }
 }
